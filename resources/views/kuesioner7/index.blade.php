@@ -24,17 +24,17 @@
 
         <!-- Deskripsi -->
         <p class="text-gray-700 text-center text-lg font-semibold">
-            Silakan isi kuesioner untuk memberikan penilaian dosen terhadap layanan tenaga kependidikan.
+            Silakan isi kuesioner untuk memberikan penilaian kepuasan mitra pendidikan dalam aspek pendidikan.
         </p>
 
         <!-- Judul Kuesioner -->
         <div class="w-full text-center px-6 py-4 rounded-lg border-2 border-teal-600 text-teal-600 font-semibold shadow-md text-lg">
-            3. KUESIONER KEPUASAN DOSEN TERHADAP LAYANAN TENAGA KEPENDIDIKAN
+            KUESIONER KEPUASAN MITRA PENDIDIKAN DALAM ASPEK PENDIDIKAN
         </div>
 
         <!-- Tombol Aksi -->
         <div class="w-full flex flex-col md:flex-row gap-4 justify-center">
-            <a href="{{ route('kuesioner3.create') }}"
+            <a href="{{ route('kuesioner7.create') }}"
                class="w-full md:w-40 text-center font-semibold px-6 py-3 bg-green-600 text-white rounded-xl transition hover:scale-105 hover:bg-green-700 shadow-md">
                 Mulai
             </a>
@@ -54,17 +54,4 @@
                     {{ $rataRata ? round($rataRata, 2) : '-' }}
                 </p>
 
-                <h3 class="text-lg font-semibold mb-2">Kategori Kepuasan:</h3>
-                <span class="text-xl font-bold px-6 py-2 rounded-lg text-white inline-block"
-                      style="background-color: 
-                      {{ $kategori == 'Sangat Tidak Setuju' ? '#DC2626' : 
-                         ($kategori == 'Tidak Setuju' ? '#F59E0B' : 
-                         ($kategori == 'Netral' ? '#D97706' :
-                         ($kategori == 'Setuju' ? '#10B981' : '#3B82F6'))) }};">
-                    {{ $kategori }}
-                </span>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                <h3 class="text-lg font-semibold mb-2">Kategori Kepuasan:</h3

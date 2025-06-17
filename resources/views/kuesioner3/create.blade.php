@@ -19,13 +19,13 @@
                 
                 <div>
                     <label for="username" class="block text-lg font-semibold mb-2">Nama :</label>
-                    <input required type="text" id="username" name="username" placeholder="Masukkan Nama"
+                    <input required type="text" id="username" name="username" placeholder="Contoh: Rizky"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
 
                 <div>
                     <label for="prodi" class="block text-lg font-semibold mb-2">Prodi :</label>
-                    <input required type="text" id="prodi" name="prodi" placeholder="Masukkan Prodi"
+                    <input required type="text" id="prodi" name="prodi" placeholder="Contoh: S1-Farmasi"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 

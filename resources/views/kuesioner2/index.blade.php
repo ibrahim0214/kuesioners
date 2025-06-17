@@ -6,54 +6,61 @@
     <title>Kuesioner Kepuasan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f4f4f9; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="bg-blue-600 text-white py-2 px-8 shadow-md flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <img src="/asset/logo1.png" class="w-16 h-16 object-contain" alt="Logo">
-            <h1 class="text-xl md:text-2xl font-bold">KUESIONER STIKES NOTOKUSUMO YOGYAKARTA</h1>
-        </div>
+    <nav class="bg-blue-600 text-white py-2 px-8 shadow-md flex items-center">
+        <img src="/asset/logo1.png" class="w-16 h-16 object-contain mr-4" alt="Logo">
+        <h1 class="text-xl md:text-2xl font-bold">KUESIONER STIKES NOTOKUSUMO YOGYAKARTA</h1>
     </nav>
 
-    <!-- Container Utama -->
+    <!-- Konten Utama -->
     <div class="flex flex-col items-center gap-6 p-8 w-full max-w-4xl mx-auto">
-        <!-- Header Section -->
-        <p class="text-gray-600 text-center text-lg font-bold">Silakan isi kuesioner untuk memberikan penilaian terhadap pimpinan Stikes Notokusumo.</p>
 
-        <!-- Tombol Aksi -->
-        <div class="flex flex-col gap-4">
+        <!-- Keterangan -->
+        <p class="text-gray-700 text-center text-lg font-semibold">
+            Silakan isi kuesioner untuk memberikan penilaian terhadap pimpinan Stikes Notokusumo.
+        </p>
 
-            <div class="w-full text-center text-lg font-semibold px-6 py-4 rounded-lg border-2 border-green-600 text-green-600 shadow-md">
-                2. Kuesioner Kepuasan terhadap Pimpinan Stikes Notokusumo Yogyakarta
-            </div>
-
-            <!-- Button Section -->
-            <div class="w-full flex flex-col gap-4">
-            <a href="{{ route('kuesioner2.create') }}" class="block text-center font-semibold px-6 py-3 bg-green-600 text-white rounded-lg transition-all hover:bg-green-700 shadow-md">
-                Mulai
-            </a>
-            <a href="{{ route('dashboard') }}" class="block text-center font-semibold px-6 py-3 bg-gray-600 text-white rounded-lg transition-all hover:bg-gray-700 shadow-md">
-                Kembali
-            </a>
-            </div>
+        <!-- Judul Kuesioner -->
+        <div class="w-full text-center px-6 py-4 rounded-lg border-2 border-teal-600 text-teal-600 font-semibold shadow-md text-lg">
+            2. KUESIONER KEPUASAN TERHADAP PIMPINAN STIKES NOTOKUSUMO YOGYAKARTA
         </div>
 
-        <div class="max-w-4xl mx-auto bg-white p-8 mt-10 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-center mb-6">Hasil Kuesioner Kepuasan</h2>
-        
-            <div class="bg-gray-100 p-4 rounded-md text-center">
-                <h3 class="text-lg font-semibold">Rata-rata Kepuasan:</h3>
-                <p class="text-2xl font-bold text-blue-600">{{ $rataRata ? round($rataRata, 2) : '-' }}</p>
-        
-                <h3 class="text-lg font-semibold mt-2">Kategori Kepuasan:</h3>
-                <span class="text-xl font-bold px-4 py-2 rounded-lg text-white"
+        <!-- Tombol -->
+        <div class="w-full flex flex-col md:flex-row gap-4 justify-center">
+            <a href="{{ route('kuesioner2.create') }}"
+               class="w-full md:w-40 text-center font-semibold px-6 py-3 bg-green-600 text-white rounded-xl transition hover:scale-105 hover:bg-green-700 shadow-md">
+                Mulai
+            </a>
+            <a href="{{ route('dashboard') }}"
+               class="w-full md:w-40 text-center font-semibold px-6 py-3 bg-gray-600 text-white rounded-xl transition hover:scale-105 hover:bg-gray-700 shadow-md">
+                Kembali
+            </a>
+        </div>
+
+        <!-- Hasil Kuesioner -->
+        <div class="bg-white w-full p-8 mt-10 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-center mb-6">Hasil Kuesioner Kepuasan</h2>
+
+            <div class="bg-gray-100 p-6 rounded-md text-center">
+                <h3 class="text-lg font-semibold mb-2">Rata-rata Kepuasan:</h3>
+                <p class="text-3xl font-bold text-blue-600 mb-4">
+                    {{ $rataRata ? round($rataRata, 2) : '-' }}
+                </p>
+
+                <h3 class="text-lg font-semibold mb-2">Kategori Kepuasan:</h3>
+                <span class="text-xl font-bold px-6 py-2 rounded-lg text-white inline-block"
                       style="background-color: 
                       {{ $kategori == 'Sangat Tidak Setuju' ? '#DC2626' : 
                          ($kategori == 'Tidak Setuju' ? '#F59E0B' : 
-                         ($kategori == 'Setuju' ? '#10B981' : '#3B82F6')) }};">
+                         ($kategori == 'Netral' ? '#D97706' :
+                         ($kategori == 'Setuju' ? '#10B981' : '#3B82F6'))) }};">
                     {{ $kategori }}
                 </span>
             </div>

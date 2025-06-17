@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Kuesioner STIKES Notokusumo</title>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-green-50 via-blue-50 to-yellow-50 min-h-screen flex flex-col font-sans">
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white py-2 px-8 flex justify-between items-center shadow-md">
         <div class="flex items-center gap-4">
@@ -17,13 +17,16 @@
 
     <!-- Main Content -->
     <main class="flex flex-1 justify-center items-center px-6 py-12">
-        <div class="max-w-4xl w-full bg-white rounded-lg shadow-lg p-10 flex flex-col md:flex-row items-center gap-8">
+        <div class="max-w-4xl w-full bg-white rounded-3xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-8">
             <!-- Left Content -->
             <div class="text-center md:text-left flex-1">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">Selamat Datang di,</h1>
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">📋 Selamat Datang di,</h1>
                 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sistem Informasi <span class="text-blue-600">KUESIONER</span> STIKES Notokusumo Online</h2>
                 <p class="text-gray-600 mb-6">Kuesioner kini bisa dilakukan di mana saja, kapan saja, secara online. Tanpa perlu kertas.</p>
-                <a href="{{ route('dashboard') }}" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition">Ikut Kuesioner Sekarang!</a>
+                <a href="{{ route('dashboard') }}"
+                   class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition block w-full text-center font-semibold text-lg">
+                    Ikut Kuesioner Sekarang!
+                </a>
             </div>
             <!-- Right Content (Image) -->
             <div class="flex-1 flex justify-center">

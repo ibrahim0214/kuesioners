@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +13,8 @@
             <h2 class="text-3xl font-bold text-center mb-6">Kuesioner Kepuasan</h2>
             <p class="text-center text-gray-600 mb-6">Silakan isi kuesioner berikut sesuai dengan pengalaman.</p>
             
-            <form action="{{ route('kuesioner.store') }}" method="POST" class="space-y-6">
+            <form action="{{ route('kuesioner7.store') }}" method="POST" class="space-y-6">
                 @csrf
-                
                 <div>
                     <label for="username" class="block text-lg font-semibold mb-2">Nama :</label>
                     <input required type="text" id="username" name="username" placeholder="Contoh: Rizky"
@@ -24,18 +22,18 @@
                 </div>
 
                 <div>
-                    <label for="prodi" class="block text-lg font-semibold mb-2">Prodi :</label>
-                    <input required type="text" id="prodi" name="prodi" placeholder="Contoh: S1-Farmasi"
+                    <label for="jabatan" class="block text-lg font-semibold mb-2">Jabatan :</label>
+                    <input required type="text" id="jabatan" name="jabatan" placeholder="Contoh: Perawat"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 
                 <hr>
                 
-                @foreach(range(1, 14) as $index)
+                @foreach(range(1, 8) as $index)
                 <div>
                     <p class="text-lg font-semibold">{{ $index }}. {{ $questions[$index - 1] }}</p>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
-                        @foreach([1 => 'Sangat Tidak Setuju', 2 => 'Tidak Setuju', 3 => 'Setuju', 4 => 'Sangat Setuju'] as $value => $label)
+                        @foreach([1 => 'Tidak Puas', 2 => 'Cukup Puas', 3 => 'Puas'] as $value => $label)
                         <label class="flex items-center gap-2">
                             <input required type="radio" name="q{{ $index }}" value="{{ $value }}" class="form-radio text-blue-500">
                             {{ $label }}
@@ -59,4 +57,4 @@
         </div>
     </x-app-layout>
 </body>
-</html>
+</html> 

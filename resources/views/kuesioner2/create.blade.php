@@ -19,25 +19,25 @@
 
                 <div>
                     <label for="username" class="block text-lg font-semibold mb-2">Nama :</label>
-                    <input required type="text" id="username" name="username" placeholder="Masukkan Nama Anda"
+                    <input required type="text" id="username" name="username" placeholder="Contoh: Rizky"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
 
                 <div>
                     <label for="jabatan_pengisi" class="block text-lg font-semibold mb-2">Jabatan Pengisi:</label>
-                    <input required type="text" id="jabatan_pengisi" name="jabatan_pengisi" placeholder="Masukkan Jabatan Anda"
+                    <input required type="text" id="jabatan_pengisi" name="jabatan_pengisi" placeholder="Contoh: Dosen"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
 
                 <div>
                     <label for="username_dinilai" class="block text-lg font-semibold mb-2">Nama Pejabatan Yang Di Nilai:</label>
-                    <input required type="text" id="username_dinilai" name="username_dinilai" placeholder="Masukkan Nama Pejabat Yang Dinilai"
+                    <input required type="text" id="username_dinilai" name="username_dinilai" placeholder="Contoh: Rizal"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"> 
                 </div>
 
                 <div>
                     <label for="jabatan_dinilai" class="block text-lg font-semibold mb-2">Jabatan Yang Di Nilai:</label>
-                    <input required type="text" id="jabatan_dinilai" name="jabatan_dinilai" placeholder="Masukkan Jabatan Yang Dinilai"
+                    <input required type="text" id="jabatan_dinilai" name="jabatan_dinilai" placeholder="Contoh: KaProdi"
                         class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
 
